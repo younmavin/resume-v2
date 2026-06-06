@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="48" viewBox="0 0 38 48">
+  <defs>
+    <linearGradient id="docGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EEEEEE"/>
+    </linearGradient>
+    <linearGradient id="redBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EE3333"/>
+      <stop offset="100%" stop-color="#AA1111"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#00000044"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="1" y="1" width="36" height="46" rx="2" fill="url(#docGrad)" stroke="#1a1a1a" stroke-width="1.2"/>
+    <polygon points="37,1 37,11 27,1" fill="#BBBBBB"/>
+    <polygon points="27,1 37,11 27,11" fill="#DDDDDD"/>
+    <rect x="1" y="27" width="36" height="14" fill="url(#redBand)"/>
+    <text x="19" y="38" text-anchor="middle" font-size="10" fill="white" font-family="Arial" font-weight="bold" letter-spacing="1">PDF</text>
+    <line x1="7" y1="17" x2="27" y2="17" stroke="#CCCCCC" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="7" y1="22" x2="23" y2="22" stroke="#CCCCCC" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+</svg>

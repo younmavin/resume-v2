@@ -1,0 +1,152 @@
+@use './abstracts/_variables';
+@use './abstracts/_mixins';
+@use './abstracts/_custom';
+
+.contact-wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000007a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  @include mixins.flex-center;
+  .contact-inner {
+    width: 100%;
+    max-width: 600px;
+    background-color: #d3d3d3;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    box-shadow: 1px 1px 0px #808080;
+    padding: 3px;
+    box-sizing: border-box;
+    .contact-top {
+      .tit {
+        @include mixins.flex-between;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        background: linear-gradient(to right, #000080, #1084d0);
+        margin-bottom: 5px;
+        button {
+          font-family: 'DnfBitbeatV2';
+          box-shadow:
+            inset -2px -2px 2px 1px variables.$shadow-color-dark,
+            inset 2px 2px 2px 1px variables.$shadow-color-light;
+          border: none;
+          width: 30px;
+          height: 30px;
+          background-color: #dfd7b9;
+          font-size: 18px;
+          &:hover {
+            box-shadow:
+              inset -2px -2px 2px 1px variables.$shadow-color-light,
+              inset 2px 2px 2px 1px variables.$shadow-color-dark;
+          }
+        }
+        h3 {
+          color: #fff;
+          font-weight: 700;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+    .contact-middle {
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+    .contact-bottom {
+      padding: 5px;
+
+      p {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        line-height: 1;
+        box-shadow:
+          inset -1px -1px 2px 0px variables.$shadow-color-light,
+          inset 1px 1px 1px 1px variables.$shadow-color-gray;
+        @include mixins.flex-center;
+        gap: 3px;
+      }
+      i {
+        color: variables.$main-color;
+      }
+    }
+    form {
+      padding: 30px;
+      box-sizing: border-box;
+      fieldset {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        &.error {
+          input,
+          textarea {
+            outline: none;
+            border: 1px solid #a72b2b;
+            &::placeholder {
+              color: #a72b2b;
+            }
+          }
+          label {
+            color: #a72b2b;
+          }
+        }
+        input,
+        textarea {
+          outline: none;
+          border: 1px solid #969696;
+          font-size: 15px;
+          font-family: 'NanumSquareNeo';
+          border-radius: 5px;
+          background-color: #fafaf8;
+          box-sizing: border-box;
+        }
+        input {
+          width: 100%;
+          height: 50px;
+          padding-left: 15px;
+        }
+        label {
+          white-space: nowrap;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        textarea {
+          width: 100%;
+          padding: 20px;
+          height: 200px;
+        }
+      }
+      button {
+        margin: 0 auto;
+        width: 150px;
+        font-size: 18px;
+        padding: 10px 20px;
+        background-color: #d3d3d3;
+      }
+    }
+  }
+}
+//tablet s size
+@media screen and (max-width: 768px) {
+  .contact-wrap {
+    .contact-inner {
+      .contact-middle {
+        height: 60vh;
+      }
+    }
+  }
+}

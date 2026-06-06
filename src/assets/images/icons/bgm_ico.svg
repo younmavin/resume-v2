@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <linearGradient id="discGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4A4A5A"/>
+      <stop offset="100%" stop-color="#1A1A2A"/>
+    </linearGradient>
+    <linearGradient id="discShine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8888CC" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#CC88CC" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#88CCCC" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="noteGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6EB0FF"/>
+      <stop offset="100%" stop-color="#1E5CC8"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2.5" flood-color="#00000055"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <circle cx="36" cy="36" r="32" fill="url(#discGrad)" stroke="#1a1a1a" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="32" fill="url(#discShine)"/>
+    <circle cx="36" cy="36" r="24" fill="none" stroke="#44445A" stroke-width="1"/>
+    <circle cx="36" cy="36" r="18" fill="none" stroke="#44445A" stroke-width="0.8"/>
+    <circle cx="36" cy="36" r="6" fill="#CCCCDD" stroke="#1a1a1a" stroke-width="1"/>
+    <circle cx="36" cy="36" r="3" fill="#AAAACC"/>
+    <text x="36" y="38" text-anchor="middle" font-size="40" fill="url(#noteGrad)" font-family="Arial" font-weight="bold">♪</text>
+  </g>
+</svg>

@@ -1,0 +1,184 @@
+@use './abstracts/_variables';
+@use './abstracts/_mixins';
+
+.bgm-player {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  width: 260px;
+  background-color: #d3d3d3;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  box-shadow: 1px 1px 0px #808080;
+  padding: 3px;
+  z-index: 9;
+
+  .bgm-titlebar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    span {
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .bgm-close {
+      width: 20px;
+      height: 20px;
+      background: #d4d0c8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        inset -2px -2px 2px 1px variables.$shadow-color-dark,
+        inset 2px 2px 2px 1px variables.$shadow-color-light;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      i {
+        font-size: 10px;
+      }
+      &:hover {
+        box-shadow:
+          inset -2px -2px 2px 1px variables.$shadow-color-light,
+          inset 2px 2px 2px 1px variables.$shadow-color-dark;
+      }
+    }
+  }
+
+  .bgm-body {
+    padding: 6px;
+  }
+
+  .bgm-screen {
+    background: #000;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    border-top: 1px solid #404040;
+    border-left: 1px solid #404040;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    .bgm-track-name {
+      color: #00dd00;
+      font-size: 10px;
+      font-family: 'Courier New';
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 3px;
+    }
+    .bgm-time {
+      color: #00dd00;
+      font-size: 18px;
+      font-family: 'Courier New';
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+  }
+
+  .bgm-progress {
+    height: 8px;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: 6px;
+    border-top: 1px solid #404040;
+    border-left: 1px solid #404040;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    .bgm-progress-fill {
+      height: 100%;
+      background: #000080;
+    }
+  }
+
+  .bgm-vol-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    .bgm-vol-label {
+      font-size: 10px;
+      color: #444;
+    }
+    .bgm-vol {
+      flex: 1;
+      height: 8px;
+      background: #fff;
+      cursor: pointer;
+      border-top: 1px solid #404040;
+      border-left: 1px solid #404040;
+      border-right: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      .bgm-vol-fill {
+        height: 100%;
+        background: #000080;
+      }
+    }
+    .bgm-vol-pct {
+      font-size: 10px;
+      color: #444;
+      width: 28px;
+    }
+  }
+
+  .bgm-controls {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 6px;
+    button {
+      flex: 1;
+      height: 24px;
+      background: #d4d0c8;
+      i {
+        font-size: 13px;
+      }
+      cursor: pointer;
+      border-top: 1px solid #fff;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #404040;
+      border-bottom: 1px solid #404040;
+      &:hover,
+      &:active {
+        border-top: 1px solid #404040;
+        border-left: 1px solid #404040;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+
+  .bgm-playlist {
+    border-top: 1px solid #404040;
+    border-left: 1px solid #404040;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    .bgm-pl-header {
+      background: linear-gradient(to right, #000080, #1084d0);
+      padding: 3px 6px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        color: #fff;
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+    .bgm-pl-item {
+      padding: 5px 8px;
+      font-size: 11px;
+      color: #333;
+      cursor: pointer;
+      border-bottom: 1px solid #e0e0e0;
+      &:hover,
+      &.active {
+        background: #1818af;
+        color: #fff;
+      }
+    }
+  }
+}

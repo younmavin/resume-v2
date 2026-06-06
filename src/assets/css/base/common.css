@@ -1,0 +1,51 @@
+/* indent */
+[class^='indent-'] {
+  display: flex;
+  gap: 3px;
+  word-break: keep-all;
+  text-align: left;
+}
+
+.data-txt {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.data-txt::before {
+  content: attr(data-txt);
+  white-space: nowrap;
+}
+
+.indent-dot,
+.indent-dash,
+.indent-ast,
+.indent-ast02 {
+  display: flex;
+  gap: 5px;
+}
+
+.indent-dot::before {
+  content: '•';
+}
+
+.indent-ast::before {
+  content: '*';
+}
+
+.indent-ast02::before {
+  content: '**';
+}
+
+.indent-dash::before {
+  content: '-';
+}
+
+.mb-none {
+  margin-bottom: 0 !important;
+}
+
+.pb-none {
+  padding-bottom: 0 !important;
+}

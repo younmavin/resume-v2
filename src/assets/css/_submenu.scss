@@ -1,0 +1,104 @@
+@use './abstracts/_variables';
+@use './abstracts/_mixins';
+
+.submenu {
+  position: fixed;
+  bottom: 60px;
+  left: 0px;
+  background-color: variables.$footer-color;
+  box-shadow:
+    inset -2px -2px 3px 1px variables.$shadow-color-gray,
+    inset 2px 2px 2px 2px variables.$shadow-color-light;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  gap: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  &-inner {
+    width: 100%;
+  }
+  .tit-wrap {
+    position: fixed;
+    width: 60px;
+    @include mixins.flex-center;
+    height: 480px;
+    background: linear-gradient(to bottom, #000080, #1084d0);
+    h3 {
+      transform: rotate(90deg);
+      white-space: nowrap;
+      color: #fff;
+      font-family: 'DnfBitbeatV2';
+      font-weight: 300;
+      letter-spacing: 5px;
+    }
+  }
+  nav {
+    width: calc(100% - 70px);
+    padding-left: 70px;
+    padding-right: 10px;
+    overflow-y: auto;
+    ul {
+      width: 100%;
+      li {
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #808080;
+        box-shadow: 0 1px 0 #ffffff;
+        @include mixins.flex-between;
+        cursor: pointer;
+        &:hover {
+          background-color: #1818af;
+          color: #fff;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+  .btn-logout {
+    background: none;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    font-weight: 400;
+    font-size: 13px;
+    img {
+      width: 40px;
+      opacity: 0.8;
+    }
+  }
+}
+//mobile size
+@media screen and (max-width: 576px) {
+  .submenu {
+    width: 280px;
+    .btn-logout {
+      bottom: 30px;
+    }
+  }
+}

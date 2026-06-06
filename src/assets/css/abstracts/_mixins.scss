@@ -1,0 +1,26 @@
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@mixin position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin transition-hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}

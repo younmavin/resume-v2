@@ -1,0 +1,87 @@
+.xp-boot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: xp-fadeout 0.8s ease forwards;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+
+  &-logo-wrap {
+    margin-bottom: 50px;
+  }
+
+  &-logo {
+    width: 500px;
+    max-width: 80vw;
+    display: block;
+  }
+
+  &-bar-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-bar {
+    width: 160px;
+    height: 12px;
+    border: 1px solid #555;
+    border-radius: 1px;
+    background: #000;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &-track {
+    position: absolute;
+    top: 2px;
+    left: -60px;
+    display: flex;
+    gap: 2px;
+    animation: xp-slide 1.4s linear infinite;
+  }
+
+  &-block {
+    width: 14px;
+    height: 8px;
+    background: #4a90d9;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
+  &-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+    color: #444;
+    font-size: 11px;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+}
+
+@keyframes xp-fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes xp-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(220px);
+  }
+}

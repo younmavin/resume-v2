@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62" height="74" viewBox="0 0 62 74">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2.5" flood-color="#00000055"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="2" y="2" width="52" height="68" rx="2" fill="#FFFFFF"/>
+    <polygon points="54,2 54,16 40,2" fill="#BBBBBB"/>
+    <polygon points="40,2 54,16 40,16" fill="#DDDDDD"/>
+    <!-- 줄 (간격 넓게) -->
+    <line x1="10" y1="22" x2="46" y2="22" stroke="#CCCCCC" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="30" x2="46" y2="30" stroke="#CCCCCC" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="38" x2="46" y2="38" stroke="#CCCCCC" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="46" x2="46" y2="46" stroke="#CCCCCC" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- 마지막 줄: git 아이콘과 센터 정렬, 좌우 여백 -->
+    <line x1="10" y1="54" x2="32" y2="54" stroke="#CCCCCC" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- GitHub 아이콘 우측 하단 (좌우 여백 추가) -->
+    <g transform="translate(44, 54) scale(0.34)">
+      <path fill="#1a1a1a" d="M0-18c-9.9 0-18 8.1-18 18 0 8 5.1 14.7 12.3 17.1.9.2 1.2-.4 1.2-.8v-3c-5 1.1-6-2.4-6-2.4-.8-2.1-2-2.6-2-2.6-1.6-1.1.1-1.1.1-1.1 1.8.1 2.8 1.9 2.8 1.9 1.6 2.7 4.2 1.9 5.2 1.5.2-1.1.6-1.9 1.1-2.4-4-.5-8.2-2-8.2-8.8 0-1.9.7-3.5 1.8-4.8-.2-.5-.8-2.3.2-4.7 0 0 1.5-.5 4.8 1.8 1.4-.4 2.9-.6 4.3-.6 1.5 0 3 .2 4.3.6 3.3-2.2 4.8-1.8 4.8-1.8 1 2.4.4 4.2.2 4.7 1.1 1.2 1.8 2.8 1.8 4.8 0 6.8-4.2 8.3-8.2 8.8.6.6 1.2 1.7 1.2 3.4v5c0 .5.3 1 1.2.8C12.9 14.7 18 8 18-0c0-9.9-8.1-18-18-18z"/>
+    </g>
+    <rect x="2" y="2" width="52" height="68" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+  </g>
+</svg>

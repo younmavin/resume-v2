@@ -1,0 +1,237 @@
+@use './abstracts/_variables';
+@use './abstracts/_mixins';
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: variables.$footer-color;
+  box-shadow:
+    inset -2px -2px 3px 1px variables.$shadow-color-gray,
+    inset 2px 2px 2px 2px variables.$shadow-color-light;
+  z-index: 99;
+  .f-inner {
+    @include mixins.flex-between;
+    height: 100%;
+    padding: 0 20px;
+    position: relative;
+    .left {
+      flex: 1;
+      button {
+        font-weight: bold;
+        height: 42px;
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      flex: 1;
+      button {
+        font-family: 'NanumSquareNeo';
+        font-size: 17px;
+        padding: 5px 20px;
+        font-weight: 600;
+        height: 44px;
+      }
+      .tray {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 4px 10px;
+        box-sizing: border-box;
+
+        .tray-icons {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          padding-right: 10px;
+          border-right: 1px solid #808080;
+
+          i {
+            font-size: 18px;
+            color: #000;
+            cursor: pointer;
+            width: 30px;
+            &:hover {
+              color: #0f22d3;
+            }
+          }
+        }
+
+        .tray-clock {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 1.2;
+          span {
+            width: 100%;
+          }
+          .time {
+            font-size: 14px;
+            font-weight: 600;
+            text-align: end;
+            margin-bottom: 5px;
+          }
+
+          .date {
+            font-size: 12px;
+            color: #404040;
+            text-align: end;
+          }
+        }
+        .bgm-deps {
+          position: fixed;
+          bottom: 60px;
+          right: 160px;
+          width: 220px;
+          background: #fff;
+          border: 1px solid #888;
+          box-shadow: 2px 2px 4px #00000044;
+          font-family: Tahoma, Arial, sans-serif;
+          z-index: 1;
+
+          // 말풍선 꼬리
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 20px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid #fff;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            right: 19px;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-top: 11px solid #888;
+          }
+
+          .inner {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 10px;
+
+            .ico {
+              flex-shrink: 0;
+              width: 22px;
+            }
+
+            p {
+              font-size: 14px;
+              color: #333;
+              line-height: 1.5;
+              word-break: keep-all;
+            }
+          }
+        }
+      }
+    }
+    .center {
+      height: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      @include mixins.flex-center;
+      gap: 20px;
+      button {
+        height: 100%;
+        height: 44px;
+        background: none;
+        font-family: 'NanumSquareNeo';
+        font-size: 18px;
+        position: relative;
+        padding-right: 25px;
+        i {
+          position: absolute;
+          right: 10px;
+          font-size: 10px;
+          top: 8px;
+        }
+      }
+    }
+  }
+}
+//laptop s size
+@media screen and (max-width: 1200px) {
+  footer {
+    .f-inner {
+      .center {
+        button {
+          span {
+            display: none;
+          }
+        }
+      }
+      .right {
+        button {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+//tablet s size
+@media screen and (max-width: 768px) {
+  footer {
+    button {
+      box-shadow: none !important;
+      :hover {
+        box-shadow: none !important;
+      }
+    }
+    .f-inner {
+      padding-right: 10px;
+      .left {
+        flex: 1;
+        button {
+          img {
+            width: 35px;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      .center {
+        margin-right: 15px;
+        .btn-web {
+          display: none !important;
+        }
+        button {
+          padding-right: 0;
+          padding-left: 0;
+          span {
+            display: none;
+          }
+        }
+      }
+      .right {
+        flex: 0;
+        button {
+          padding: 0;
+        }
+        .tray {
+          .tray-icons {
+            border: none;
+            padding-right: 0;
+          }
+          .tray-clock {
+            display: none;
+          }
+          .bgm-deps {
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

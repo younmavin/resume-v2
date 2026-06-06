@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="82" viewBox="0 0 70 82">
+  <defs>
+    <linearGradient id="paperGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#F0F4FF"/>
+      <stop offset="100%" stop-color="#C8D4E8"/>
+    </linearGradient>
+    <linearGradient id="wordBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2B579A"/>
+      <stop offset="100%" stop-color="#1A3A6A"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2.5" flood-color="#00000055"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- 문서 본체 -->
+    <rect x="2" y="2" width="60" height="74" rx="2" fill="url(#paperGrad)"/>
+    <!-- 접힌 모서리 -->
+    <polygon points="62,2 62,18 46,2" fill="#8898BB"/>
+    <polygon points="46,2 62,18 46,18" fill="#D0DCF0"/>
+
+    <!-- Word 스타일 상단 파란 배너 -->
+    <rect x="2" y="2" width="44" height="22" rx="2" fill="url(#wordBlue)"/>
+    <rect x="2" y="14" width="44" height="10" fill="url(#wordBlue)"/>
+
+    <!-- W 로고 -->
+    <text x="8" y="20" font-size="18" fill="white" font-family="Arial" font-weight="bold">W</text>
+    <!-- 작은 텍스트 -->
+    <text x="26" y="16" font-size="5.5" fill="#AACCFF" font-family="Arial">Microsoft</text>
+    <text x="26" y="22" font-size="6" fill="white" font-family="Arial" font-weight="bold">Word</text>
+
+    <!-- 줄들 -->
+    <rect x="8" y="30" width="48" height="2.5" rx="1.2" fill="#B0C0DC"/>
+    <rect x="8" y="36" width="44" height="2.5" rx="1.2" fill="#B0C0DC"/>
+    <rect x="8" y="42" width="48" height="2.5" rx="1.2" fill="#B0C0DC"/>
+    <rect x="8" y="48" width="40" height="2.5" rx="1.2" fill="#B0C0DC"/>
+    <rect x="8" y="54" width="46" height="2.5" rx="1.2" fill="#B0C0DC"/>
+    <rect x="8" y="60" width="36" height="2.5" rx="1.2" fill="#B0C0DC"/>
+    <rect x="8" y="66" width="42" height="2.5" rx="1.2" fill="#C8D8F0"/>
+
+    <!-- 하이라이트 -->
+    <rect x="3" y="2" width="18" height="22" rx="2" fill="white" opacity="0.12"/>
+    <!-- 외곽 테두리 -->
+    <rect x="2" y="2" width="60" height="74" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+  </g>
+</svg>
