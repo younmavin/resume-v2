@@ -1,38 +1,11 @@
-# mavin-resume
+이 포트폴리오는 Windows 98 + Windows XP 테마를 기반으로 레트로한 감성을 살려 제작했습니다.
+부팅 인트로 화면부터 하단 툴바, 창 UI 폼, 아이콘 이미지 소스, 레트로 BGM까지 XP 감성을 하나하나 디테일하게 구현했으며, 화면에 보이는 모든 UI 요소는 실제 기능을 제공하고 있으니 참고바랍니다.
 
-This template should help get you started developing with Vue 3 in Vite.
+URL: https://ddw6229.dothome.co.kr/
 
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+1.Vue.js SFC 기반 공통 컴포넌트 모듈화 및 데이터 바인딩 구현
+2.공통 스타일 변수 및 함수화를 통한 코드 재사용성 향상 및 유지보수 효율 개선
+3.EmailJS를 활용한 실제 메일 발송 기능 구현
+4.GitHub REST API 연동을 통한 레포지토리 동적 조회 및 렌더링 구현
+5.Amazon S3를 활용한 이미지 리소스 외부 저장 및 CDN 배포를 통한 트래픽 최적화
+6.Google Analytics 연동을 통한 사용자 행동 데이터 수집 및 트래킹 구현
