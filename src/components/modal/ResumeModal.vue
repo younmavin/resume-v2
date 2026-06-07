@@ -41,7 +41,7 @@ const careers = [
 <template>
   <ModalBase ref="modalRef" :title="resume.label" :icon="resume.icon" project-id="resume" @close="$emit('close')" @open="$emit('open', $event)">
     <div class="modal-middle-inner">
-      <div class="bg"><img src="https://mavin-resume02.s3.ap-southeast-2.amazonaws.com/images/resume_bg.png" alt="" /></div>
+      <div class="bg"><img src="../../assets/images/resume_bg.png" alt="" /></div>
       <hgroup>
         <h3>안녕하세요 웹퍼블리셔 윤관호 인사드립니다.</h3>
         <p>단순한 화면 구현에 그치지 않고, 지속적인 리팩토링으로 코드를 간결하고 읽기 쉽게 다듬는 것을 중요하게 생각합니다. W3C 표준을 준수한 마크업을 기반으로 모든 사용자가 편리하게 이용할 수 있는 환경을 만들고, 적절한 인터랙션과 애니메이션을 더해 풍부한 웹 경험을 제공합니다.</p>
