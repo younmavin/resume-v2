@@ -550,9 +550,10 @@
 //tablet s size
 @media screen and (max-width: 768px) {
   .modal-wrap {
+    align-items: start;
     .modal-inner {
       .modal-middle {
-        height: 60vh;
+        height: 70vh;
         padding-top: 30px;
         &-inner {
           padding: 20px;
@@ -615,7 +616,7 @@
         }
       }
       .modal-middle {
-        height: 50vh;
+        height: 60vh;
         &-inner {
           padding: 10px;
         }

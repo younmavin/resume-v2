@@ -116,7 +116,7 @@ const sendMail = async () => {
       <div class="contact-top">
         <div class="tit">
           <h3>
-            <img src="https://mavin-resume02.s3.ap-southeast-2.amazonaws.com/images/icons/smail_ico.png" alt="" />
+            <img src="https://mavin-resume02.s3.ap-southeast-2.amazonaws.com/images/icons/mail_ico.png" alt="" />
             메일 보내기
           </h3>
           <button class="btn-close" @click="emit('close')"><i class="fa-solid fa-x"></i></button>

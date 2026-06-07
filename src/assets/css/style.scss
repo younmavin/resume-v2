@@ -115,6 +115,7 @@ main {
     padding-left: 30px;
   }
   main {
+    overflow-y: auto;
     .typing-txt {
       font-size: 30px;
       max-width: 500px;

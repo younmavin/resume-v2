@@ -143,6 +143,8 @@
 //tablet s size
 @media screen and (max-width: 768px) {
   .contact-wrap {
+    padding: 10px;
+    box-sizing: border-box;
     .contact-inner {
       .contact-middle {
         height: 60vh;

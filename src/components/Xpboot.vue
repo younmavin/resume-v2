@@ -2,10 +2,15 @@
 import { onMounted } from 'vue'
 
 const emit = defineEmits(['done'])
-const bootLogo = 'https://mavin-resume02.s3.ap-southeast-2.amazonaws.com/images/xp_boot_logo.png'
+import bootLogo from '../assets/images/xp_boot_logo.png'
 
 onMounted(() => {
-  setTimeout(() => emit('done'), 4300)
+  const img = new Image()
+  img.src = bootLogo
+  img.onload = () => {
+    // 이미지 로드 완료 후 타이머 시작
+    setTimeout(() => emit('done'), 4300)
+  }
 })
 </script>
 

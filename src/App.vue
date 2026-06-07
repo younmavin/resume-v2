@@ -10,7 +10,7 @@ const isBooting = ref(true)
 const openModal = ref(null)
 const isContactOpen = ref(false)
 const isMobile = window.innerWidth <= 768
-const isInfoOpen = ref(!isMobile) // 모바일이면 기본 false
+const isInfoOpen = ref(!isMobile)
 </script>
 
 <template>
