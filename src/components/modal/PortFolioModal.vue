@@ -89,7 +89,7 @@ const etcList = [
 <template>
   <ModalBase ref="modalRef" :title="portfolio.label" :icon="portfolio.icon" project-id="portfolio" @close="$emit('close')" @open="$emit('open', $event)">
     <div class="modal-middle-inner">
-      <div class="bg"><img src="../../assets/images/p_bg.png" alt="" /></div>
+      <div class="bg"><img src="https://mavin-resume02.s3.ap-southeast-2.amazonaws.com/images/p_bg.png" alt="" /></div>
       <article v-for="(item, i) in webzines" :key="i">
         <hgroup>
           <h6 v-if="item.label">{{ item.label }}</h6>
